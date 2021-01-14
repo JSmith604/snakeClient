@@ -17,7 +17,15 @@ const connect = function() {
     console.log("Successfully connect to game server")
     conn.write('Name: JWS');
   });
+  
+  conn.on('connect', () => {
+    conn.write('Move: up');
+    setInterval(() => {conn.write ("Move: left")}, 100);
+    setTimeout(() => {conn.write ("Move: left")}, 100);
+    setTimeout(() => {conn.write ("Move: left")}, 100);
+  });
 
+  
 
   return conn;
 }
