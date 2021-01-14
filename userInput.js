@@ -1,3 +1,5 @@
+
+
 let connection;
 
 
@@ -38,4 +40,6 @@ const setupInput = function(conn) {
   stdin.on('data', handleUserInput);
   return stdin;
 }
+
+module.exports = {setupInput};
 
