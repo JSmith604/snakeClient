@@ -17,7 +17,4 @@ const connect = function() {
 console.log('You ded cuz you idled!');
 connect();
 
-//play.js 
-const { connect } = require('./client');
-console.log('Connecting ...');
-connect();
+module.exports = connect;
